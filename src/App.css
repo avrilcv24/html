@@ -1,0 +1,285 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0b1120;
+  color: white;
+}
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+header {
+  background-color: #111827;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #1f2937;
+}
+
+header h1 {
+  font-size: 28px;
+  color: #f59e0b;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #f59e0b;
+}
+
+/* =========================
+   SECCIONES
+========================= */
+
+section {
+  padding: 80px 60px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+/* =========================
+   INICIO
+========================= */
+
+#inicio {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+#inicio h2 {
+  font-size: 56px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+#inicio p {
+  font-size: 20px;
+  max-width: 650px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #cbd5e1;
+}
+
+#inicio a {
+  text-decoration: none;
+}
+
+/* =========================
+   BOTONES
+========================= */
+
+button {
+  background-color: #f59e0b;
+  color: #111827;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #fbbf24;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   PELÍCULAS
+========================= */
+
+#peliculas {
+  background-color: #0f172a;
+  max-width: none;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+#peliculas h2 {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.peliculas-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 25px;
+}
+
+.pelicula {
+  background-color: #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.pelicula:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.pelicula img {
+  width: 100%;
+  height: 285px;
+  object-fit: cover;
+  display: block;
+}
+
+.pelicula-info {
+  padding: 15px;
+}
+
+.pelicula-info h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.pelicula-info p {
+  color: #cbd5e1;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+/* =========================
+   GÉNEROS
+========================= */
+
+#generos {
+  text-align: center;
+}
+
+.generos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.generos button {
+  min-width: 130px;
+}
+
+/* =========================
+   CONTACTO
+========================= */
+
+#contacto {
+  text-align: center;
+}
+
+#contacto form {
+  max-width: 600px;
+  margin: 30px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contacto input,
+#contacto textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  background-color: #1e293b;
+  color: white;
+  font-size: 16px;
+}
+
+#contacto textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+#contacto input:focus,
+#contacto textarea:focus {
+  outline: 2px solid #f59e0b;
+}
+
+#contacto button {
+  align-self: center;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  header {
+    padding: 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  section {
+    padding: 60px 20px;
+  }
+
+  #inicio h2 {
+    font-size: 38px;
+  }
+
+  #inicio p {
+    font-size: 17px;
+  }
+
+  #peliculas {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .peliculas-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .pelicula img {
+    height: 240px;
+  }
+}
